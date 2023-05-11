@@ -1,0 +1,42 @@
+.sky {
+    background-color: #0099cc;
+    height: 100vh;
+    position: relative;
+}
+
+.sun-moon {
+    position: absolute;
+    left: 96%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.sun, .moon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.sun {
+    animation: sun-moon-cycle 10s linear infinite;
+    transform-origin: center bottom;
+    background-color: rgba(245, 234, 11, 0.84);
+}
+
+.moon {
+    animation: sun-moon-cycle 10s linear infinite;
+    animation-delay: 5s;
+    transform: rotate(-180deg);
+    transform-origin: right;
+    background-color: #fff;
+}
+
+@keyframes sun-moon-cycle {
+    0% { transform: rotate(0) translateX(50px) rotate(0); }
+    25% { transform: rotate(90deg) translateX(50px) rotate(-90deg); }
+    50% { transform: rotate(180deg) translateX(50px) rotate(-180deg); }
+    75% { transform: rotate(270deg) translateX(50px) rotate(-270deg); }
+    100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+

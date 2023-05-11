@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Является ли слово палиндромом?</h1>
+  <p>Введите слово:</p>
+  <input type="text" id="word">
+  <button onclick="check()">Ввод</button>
+  <p id="result"></p>
+</body>
+<script>
+  function check() {
+    let word = document.getElementById("word").value;
+    if (word.toLowerCase() === word.toLowerCase().split("").reverse().join("")) {
+      document.getElementById("result").innerHTML = "Является палиндромом";
+    }
+    else {
+      document.getElementById("result").innerHTML = "Не является палиндромом";
+    }
+  }
+</script>
+
+</html>

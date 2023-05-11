@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Загадка</title>
 </head>
 <body>
+    <h1>Загадка:</h1>
+    <p>Зимой и летом одним цветом, что это?</p>
+    <input type="text" id="answer">
+    <button onclick="checkAnswer()">Ответить</button>
+    <p id="result"></p>
 </body>
 <script>
-    let a = 0;
-
+    function checkAnswer() {
+        let answer = document.getElementById("answer").value;
+        if (answer.toLowerCase() === "елка") {
+            document.getElementById("result").innerHTML = "Верно";
+        }
+    }
 </script>
 </html>

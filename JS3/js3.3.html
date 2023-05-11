@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <blockquote id="positive">Среднее арифметическое положительных чисел: </blockquote>
+  <blockquote id="negative">Среднее арифметическое отрицательных чисел: </blockquote>
+  <blockquote id="nul">число нулей: </blockquote>
+</body>
+<script>
+  let mas = [-5,-1,0,3,-1,6,-9,16,-8,18,0,24,15,-26,25,5,12,-20,11,0]
+  let pos= [];
+  let neg= [];
+  let nul= [];
+  for (let i in mas){
+    if (mas[i] > 0) pos.push(mas[i]);
+    if (mas[i] < 0) neg.push(mas[i]);
+    if (mas[i] === 0) nul.push(mas[i]);
+  }
+  let sumPos = 0;
+  let sumNeg = 0;
+  for (let i in pos) sumPos += pos[i];
+  for (let i in neg) sumNeg += pos[i];
+  document.getElementById("positive").innerHTML += sumPos/pos.length;
+  document.getElementById("negative").innerHTML += sumNeg/neg.length;
+  document.getElementById("nul").innerHTML += nul.length;
+</script>
+</html>
